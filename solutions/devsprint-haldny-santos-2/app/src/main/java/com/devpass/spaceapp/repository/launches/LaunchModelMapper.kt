@@ -37,7 +37,7 @@ class LaunchModelMapperImpl : LaunchModelMapper {
         return try {
             val timestamp = Instant.parse(dateValue)
             val date = Date.from(timestamp)
-            val sdf = SimpleDateFormat("MMMM dd, yyyy")
+            val sdf = SimpleDateFormat("MMMM dd, yyyy", Locale.ENGLISH)
             sdf.format(date)
         } catch (e: RuntimeException) {
             "Bad formatted date"
